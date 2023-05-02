@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/b94100b9f6.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js" defer type="module"></script>
+    <script src="./js/app.js" defer type="module"></script>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Museum</title>
@@ -21,26 +23,29 @@
 
     <header>
         <div class="logo">
-            <img src="./img/museum.png" class="logo__image" alt="logo do museu">
+            <a href="/" onclick="route()">
+                <img src="./img/museum.png" class="logo__image" alt="logo do museu">
+            </a>
+         
             <h3 class="logo__title">THE MUSEUM</h3>
         </div>
 
         <nav>
             <ul class="menu">
                 <li>
-                    <a href="#">Art Collections</a>
+                    <a href="/collections" onclick="route()">Art Collections</a>
                 </li>
             <li>
-                <a href="#">Travel</a>
+                <a href="/travel" onclick="route()">Travel</a>
             </li>
             <li>
-                <a href="#">Visit</a>
+                <a href="/visit" onclick="route()">Visit</a>
             </li>
         </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="root">
         <div class="container-main">
             <div class="title">
                 <span>Welcome to The Museum</span>

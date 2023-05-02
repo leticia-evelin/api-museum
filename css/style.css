@@ -160,3 +160,16 @@ footer{
     font-size: 1.1rem;
 }
 
+
+.visit-container{
+    background-color: blue;
+}
+
+.collections-container{
+    background-color: red;
+}
+
+.travel-container{
+    background-color: green;
+}
+
