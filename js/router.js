@@ -3,8 +3,7 @@
 const routes = {
     '/': '/index.html',
     '/collections' : '/pages/collections.html',
-    '/travel'     : '/pages/travel.html',
-    '/visit'    : '/pages/visit.html'
+    '/videos'     : '/pages/videos.html'
 }
 
 

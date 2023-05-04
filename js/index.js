@@ -2,12 +2,41 @@
 
 
 import { colecoes } from "./api.js"
-let all = await colecoes();
+// let all = await colecoes();
 
 
+class cardVideo extends HTMLElement {
+   constructor(){
+       super()
+       //virando global this.
+       this.shadow = this.attachShadow({mode: 'open'}) //pode alterar as opções
+       this.nome = ''
+       this.foto = null
+       this.cor = ''
+   }
 
+   static get observedAttributes(){
+       return['', '', '']
+   }
 
-   const cardVideo = (video) => {
+   attributeChangedCallback(nameAttr, oldValue, newValue){
+       this[nameAttr] = newValue //colchetes para mandar variavel
+   }
+
+   connectedCallback(){
+      //metodos/função
+      this.shadow.appendChild(this.component())
+      this.shadow.appendChild(this.styles())
+   }
+
+   styles(){
+      const css = document.createElement('style')
+      css.textContent = `
+   
+   
+      `
+   }
+   component(video){
 
       const card = document.createElement('a')
       card.href = "./index.html"
@@ -15,7 +44,7 @@ let all = await colecoes();
       card.classList.add('card')
 
       const name = document.createElement('h3')
-      name.classList.add('card__name')
+      name.classList.add('card__title')
       name.textContent = all.title
 
       const description = document.createElement('p')
@@ -23,7 +52,7 @@ let all = await colecoes();
       description.textContent = video.description
 
       const img = document.createElement('span')
-      img.classList.add('card__date')
+      img.classList.add('card__video')
       img.textContent = video.youtube_url
 
 
@@ -33,14 +62,15 @@ let all = await colecoes();
 
    }
 
+   
 
-
-const carregar = () => {
-
-   const container = document.getElementById('container-art')
-   const cards = all.video.map(cardVideo)
-   container.append(...cards)
 }
+   const carregar = () => {
+
+      const container = document.getElementById('container-art')
+      const cards = colecoes.map(cardVideo)
+      container.replaceChildren(...cards)
+   }
 
 carregar()
 

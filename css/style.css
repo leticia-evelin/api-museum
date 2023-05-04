@@ -90,7 +90,7 @@ header{
 .title{
     /* display: flex; */
     font-family: 'Poppins', sans-serif;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 400;
     width: 400px;
     text-align: center;
@@ -137,8 +137,8 @@ footer{
     transform: scale(1.2);
 }
 .social-icon {
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     padding: 1.7rem;
     display: flex;
     align-items: center;
@@ -161,15 +161,11 @@ footer{
 }
 
 
-.visit-container{
-    background-color: blue;
-}
-
 .collections-container{
     background-color: red;
 }
 
-.travel-container{
+.videos-container{
     background-color: green;
 }
 

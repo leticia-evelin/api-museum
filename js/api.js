@@ -7,12 +7,6 @@
     const data = await response.json()
     console.log(colecoes);
 
-    // return {
-    //     image: data.primaryImage,
-    //     name: data.title,
-    //     culture: data.culture,
-    //     date: data.objectDate
-    // }
 
         return{
             url : data.youtube_url,
