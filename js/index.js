@@ -2,7 +2,7 @@
 
 
 import { colecoes } from "./api.js"
-// let all = await colecoes();
+let videos = await colecoes();
 
 
 class cardVideo extends HTMLElement {
@@ -10,17 +10,10 @@ class cardVideo extends HTMLElement {
        super()
        //virando global this.
        this.shadow = this.attachShadow({mode: 'open'}) //pode alterar as opções
-       this.nome = ''
-       this.foto = null
-       this.cor = ''
-   }
-
-   static get observedAttributes(){
-       return['', '', '']
    }
 
    attributeChangedCallback(nameAttr, oldValue, newValue){
-       this[nameAttr] = newValue //colchetes para mandar variavel
+      this[nameAttr] = newValue 
    }
 
    connectedCallback(){
@@ -36,7 +29,7 @@ class cardVideo extends HTMLElement {
    
       `
    }
-   component(video){
+   component(){
 
       const card = document.createElement('a')
       card.href = "./index.html"
@@ -45,7 +38,7 @@ class cardVideo extends HTMLElement {
 
       const name = document.createElement('h3')
       name.classList.add('card__title')
-      name.textContent = all.title
+      name.textContent = video.title
 
       const description = document.createElement('p')
       description.classList.add('card__description')
@@ -67,10 +60,12 @@ class cardVideo extends HTMLElement {
 }
    const carregar = () => {
 
-      const container = document.getElementById('container-art')
-      const cards = colecoes.map(cardVideo)
-      container.replaceChildren(...cards)
+      const container = document.getElementById('container')
+      const cards = (cardVideo)
+      container.replaceChild(...cards)
    }
 
 carregar()
+
+customElements.define('container-art', cardVideo)
 
