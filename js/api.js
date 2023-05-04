@@ -1,22 +1,26 @@
 'use strict'
 
  export const colecoes = async () => {
-    let list = []
-    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objectsId`
+    // let token = "d5e35518b330cab7beb621b5c68cad84";
+    const url = `https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.videos.getList&access_token=d5e35518b330cab7beb621b5c68cad84&page=1&per_page=10`
     const response = await fetch(url)
     const data = await response.json()
     console.log(colecoes);
 
-    // let primeiraArte = data.
-    // data.results.map(element => {
-    //     list.push(element.url)
-    // })
+    // return {
+    //     image: data.primaryImage,
+    //     name: data.title,
+    //     culture: data.culture,
+    //     date: data.objectDate
+    // }
 
-    // return list
-    return {
-        image: data.primaryImage,
-        name: data.title,
-        culture: data.culture,
-        date: data.objectDate
-    }
+        return{
+            url : data.youtube_url,
+            title : data.title,
+            description : data.description,
+        }
+
+    // return{
+    //     ...data
+    // }
 }

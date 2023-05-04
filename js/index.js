@@ -1,35 +1,33 @@
 'use strict'
 
+
 import { colecoes } from "./api.js"
-let art = await colecoes();
-console.log(art);
-const objectID = localStorage.getItem('id_card')
+let all = await colecoes();
 
 
-   const cardArt = () => {
+
+
+   const cardVideo = (video) => {
 
       const card = document.createElement('a')
       card.href = "./index.html"
       card.target = 'blank_'
       card.classList.add('card')
 
-      const nome = document.createElement('h3')
-      nome.classList.add('card__name')
-      nome.textContent = art.name
+      const name = document.createElement('h3')
+      name.classList.add('card__name')
+      name.textContent = all.title
 
-      const cultura = document.createElement('p')
-      cultura.classList.add('card__culture')
-      cultura.textContent = art.culture
+      const description = document.createElement('p')
+      description.classList.add('card__description')
+      description.textContent = video.description
 
-      const data = document.createElement('span')
-      data.classList.add('card__date')
-      data.textContent = art.date
+      const img = document.createElement('span')
+      img.classList.add('card__date')
+      img.textContent = video.youtube_url
 
-      const img = document.createElement('img')
-      img.classList.add('card__image')
-      img.src = art.image
 
-      card.append(img, nome, cultura, data)
+      card.append(name, img, description)
 
       return card
 
@@ -37,11 +35,11 @@ const objectID = localStorage.getItem('id_card')
 
 
 
-const carregar = async () => {
+const carregar = () => {
 
-    const container = document.getElementById('container-art')
-
-    container.replaceChildren(...artes)
+   const container = document.getElementById('container-art')
+   const cards = all.video.map(cardVideo)
+   container.append(...cards)
 }
 
 carregar()
