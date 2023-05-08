@@ -9,10 +9,27 @@
     console.log(videos);
 
         return{
-            url : videos.youtube_url,
-            title : videos.title,
-            description : videos.description,
-        }
+            // url : videos.youtube_url,
+            // title : videos.title,
+            // description : videos.description,
+            ...data
+        }   
+}
 
-    
+export const foto = async () => {
+
+    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/437133`
+    const response = await fetch(url)
+    const data = await response.json()
+    // const {images} = data;
+    console.log(foto)
+
+    return{
+        // url : images.url,
+        // id : images.image_id
+        ...data
+    }
+
+
+
 }

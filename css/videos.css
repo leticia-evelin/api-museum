@@ -1,0 +1,26 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.card{
+    width: 450px;
+    height: 450px;
+}
+
+.card__title{
+    font-family: 'Inter', sans-serif;
+}
+
+.card__video{
+    width: 450px;
+    height: 300px;
+}
+
+.card__description{
+    font-family: 'Inter', sans-serif;
+}

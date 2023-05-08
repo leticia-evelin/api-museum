@@ -1,27 +1,27 @@
-'use strict'
+// 'use strict'
 
-const routes = {
-    '/': '/index.html',
-    '/collections' : '/pages/collections.html',
-    '/videos'     : '/pages/videos.html'
-}
+// const routes = {
+//     '/': '/index.html',
+//     '/collections' : '/pages/collections.html',
+//     '/videos'     : '/pages/videos.html'
+// }
 
 
-const route = async () => {
-    window.event.preventDefault()
-    window.history.pushState({}, "", window.event.target.href)
+// const route = async () => {
+//     window.event.preventDefault()
+//     window.history.pushState({}, "", window.event.target.href)
    
-    const path = window.location.pathname
-    const route = routes[path]
+//     const path = window.location.pathname
+//     const route = routes[path]
 
-    const response = await fetch(route)
-    const html = await response.text()
+//     const response = await fetch(route)
+//     const html = await response.text()
 
-    document.getElementById('root').innerHTML = html
+//     document.getElementById('root').innerHTML = html
 
-    console.log(html)
+//     console.log(html)
 
-}
+// }
 
 
-window.route = route
+// window.route = route

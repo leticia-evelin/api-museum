@@ -1,71 +1,33 @@
 'use strict'
 
+import { foto } from "./api.js"
+let testando = await foto();
 
-import { colecoes } from "./api.js"
-let videos = await colecoes();
+const plate = (testando) => {
 
+    const card = document.createElement('div')
+    card.classList.add('card')
 
-class cardVideo extends HTMLElement {
-   constructor(){
-       super()
-       //virando global this.
-       this.shadow = this.attachShadow({mode: 'open'}) //pode alterar as opções
-   }
-
-   attributeChangedCallback(nameAttr, oldValue, newValue){
-      this[nameAttr] = newValue 
-   }
-
-   connectedCallback(){
-      //metodos/função
-      this.shadow.appendChild(this.component())
-      this.shadow.appendChild(this.styles())
-   }
-
-   styles(){
-      const css = document.createElement('style')
-      css.textContent = `
-   
-   
-      `
-   }
-   component(){
-
-      const card = document.createElement('a')
-      card.href = "./index.html"
-      card.target = 'blank_'
-      card.classList.add('card')
-
-      const name = document.createElement('h3')
-      name.classList.add('card__title')
-      name.textContent = video.title
-
-      const description = document.createElement('p')
-      description.classList.add('card__description')
-      description.textContent = video.description
-
-      const img = document.createElement('span')
-      img.classList.add('card__video')
-      img.textContent = video.youtube_url
-
-
-      card.append(name, img, description)
-
-      return card
-
-   }
-
+    const img = document.createElement('img')
+    img.classList.add('card__foto')
+    img.textContent = testando.primaryImage
    
 
-}
-   const carregar = () => {
+    card.append(img)
 
-      const container = document.getElementById('container')
-      const cards = (cardVideo)
-      container.replaceChild(...cards)
-   }
+    return card
+
+ }
+
+
+ const carregar = async () => {
+    console.log(testando)
+
+    const container = document.getElementById('container')
+    const cards =  testando.map(plate)
+    container.replaceChildren(...cards)
+ }
+
 
 carregar()
-
-customElements.define('container-art', cardVideo)
 
