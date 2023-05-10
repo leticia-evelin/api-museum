@@ -20,14 +20,14 @@ const plate = (testando) => {
  }
 
 
- const carregar = async () => {
-    console.log(testando)
+//  const carregar = async () => {
+//     console.log(testando)
 
-    const container = document.getElementById('container')
-    const cards =  testando.map(plate)
-    container.replaceChildren(...cards)
- }
+//     const container = document.getElementById('container')
+//     const cards =  testando.map(plate)
+//     container.replaceChildren(...cards)
+//  }
 
 
-carregar()
+// carregar()
 

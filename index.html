@@ -8,19 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/b94100b9f6.js" crossorigin="anonymous"></script>
     <script src="./js/index.js" defer type="module"></script>
-    <!-- <script src="./js/index.js" defer type="module"></script>
-    <script src="./js/app.js" defer type="module"></script> -->
+    <!-- <script src="./js/index.js" defer type="module"></script> -->
+    <script src="./js/app.js" defer type="module"></script>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Museum</title>
 </head>
 <body>
-
-    <!-- <div class="start">
-        <span class="text">Register</span>
-        <span>or</span>
-        <span class="text">Log In</span>
-    </div> -->
 
     <header>
         <div class="logo">
@@ -30,15 +24,10 @@
             <h3 class="logo__title">THE MUSEUM</h3>
         </div>
 
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="/pages/collections.html">Art Collections</a>
-                </li>
-            <li>
-                <a href="/pages/videos.html">Videos</a>
-            </li>
-        </ul>
+        <nav class="menu">
+                <!-- <a href="/" onclick="route()">Home</a> -->
+            <a href="/collections" onclick="route()">Art Collections</a>
+            <a href="/videos" onclick="route()">Videos</a>
         </nav>
     </header>
 
@@ -50,7 +39,6 @@
             </div>
             <div id="container" class="container"></div>
 
-        <!-- <container-art title=""></container-art> -->
         </div>
     </main>
 

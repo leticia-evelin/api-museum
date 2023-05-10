@@ -57,16 +57,16 @@ let teste = await colecoes();
    }
 
 
-   const carregar = async () => {
+   export const carregarVideo = async () => {
       
       console.log(teste)
-      const container = document.getElementById('container')
+      const container = document.getElementById('container-videos')
       const cards =  teste.videos.map(cardVideo)
       container.replaceChildren(...cards)
    }
 
   
-carregar()
+carregarVideo()
 
 // customElements.define('container-art', cardVideo)
 
