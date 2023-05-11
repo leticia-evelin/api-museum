@@ -30,9 +30,11 @@ let teste = await colecoes();
 //       `
 //    }
    // component(video){
+     
 
    const cardVideo = (teste) => {
- 
+      // var youtube_url = youtube_url.replace("watch?v=", "v/");
+
       const card = document.createElement('div')
       card.classList.add('card')
 
@@ -44,13 +46,18 @@ let teste = await colecoes();
       description.classList.add('card__description')
       description.textContent = teste.description
 
-      const video = document.createElement('video')
-      video.classList.add('card__video')
-      // video.textContent = teste.youtube_url
-      video.src = teste.youtube_url
-      video.autoplay = true;
+      const iframe = document.createElement('iframe')
+      iframe.classList.add('card__video')
+      iframe.width = '560'
+      iframe.height = '315'
+      iframe.src = "https://" + teste.youtube_url
+      // iframe.autoplay;
+      // iframe.allow = "accelerometer";
+      // iframe.clipboard-write;
+      iframe.allowFullscreen = true;
+      
 
-      card.append(name, video, description)
+      card.append(name, iframe, description)
 
       return card
 

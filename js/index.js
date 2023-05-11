@@ -1,23 +1,23 @@
-'use strict'
+// 'use strict'
 
-import { foto } from "./api.js"
-let testando = await foto();
+// import { foto } from "./api.js"
+// let testando = await foto();
 
-const plate = (testando) => {
+// const plate = (testando) => {
 
-    const card = document.createElement('div')
-    card.classList.add('card')
+//     const card = document.createElement('div')
+//     card.classList.add('card')
 
-    const img = document.createElement('img')
-    img.classList.add('card__foto')
-    img.textContent = testando.primaryImage
+//     const img = document.createElement('img')
+//     img.classList.add('card__foto')
+//     img.textContent = testando.primaryImage
    
 
-    card.append(img)
+//     card.append(img)
 
-    return card
+//     return card
 
- }
+//  }
 
 
 //  const carregar = async () => {
