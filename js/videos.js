@@ -33,7 +33,7 @@ let teste = await colecoes();
      
 
    const cardVideo = (teste) => {
-      // var youtube_url = youtube_url.replace("watch?v=", "v/");
+      // var youtube_url = youtube_url.replace("watch?v=", "embed/");
 
       const card = document.createElement('div')
       card.classList.add('card')
@@ -50,14 +50,14 @@ let teste = await colecoes();
       iframe.classList.add('card__video')
       iframe.width = '560'
       iframe.height = '315'
-      iframe.src = "https://" + teste.youtube_url
-      // iframe.autoplay;
+      iframe.src = "https://" + teste.youtube_url.replace("watch?v=", "embed/");
+      iframe.autoplay;
       // iframe.allow = "accelerometer";
       // iframe.clipboard-write;
       iframe.allowFullscreen = true;
       
 
-      card.append(name, iframe, description)
+      card.append(name, description, iframe)
 
       return card
 
