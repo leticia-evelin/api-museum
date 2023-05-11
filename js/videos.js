@@ -33,8 +33,6 @@ let teste = await colecoes();
      
 
    const cardVideo = (teste) => {
-      // var youtube_url = youtube_url.replace("watch?v=", "embed/");
-
       const card = document.createElement('div')
       card.classList.add('card')
 
@@ -52,8 +50,6 @@ let teste = await colecoes();
       iframe.height = '315'
       iframe.src = "https://" + teste.youtube_url.replace("watch?v=", "embed/");
       iframe.autoplay;
-      // iframe.allow = "accelerometer";
-      // iframe.clipboard-write;
       iframe.allowFullscreen = true;
       
 
@@ -75,5 +71,5 @@ let teste = await colecoes();
   
 carregarVideo()
 
-// customElements.define('container-art', cardVideo)
+// customElements.define('container-videos', cardVideo)
 

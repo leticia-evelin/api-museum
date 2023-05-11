@@ -52,40 +52,6 @@ header{
     justify-content: space-around;
 }
 
-.logo{
-    display: flex;
-    width: 40%; 
-    gap: 10px;
-}
-.logo__image{
-    display: flex;
-    width: 90px;
-    height: 90px;
-}
-.logo__title{
-    display: flex;
-    font-size: 24px;
-    width: 120px;
-    align-items: center;
-    font-family: 'Acme', sans-serif;
-}
-.menu{
-    display: flex;
-    gap: 80px;
-    font-size: 2rem;
-    align-items: center;
-    /* width: 100%; */
-    font-family: 'Poppins', sans-serif;
-}
-
-.menu li{
-    border-bottom: 4px solid transparent;
-    transition: border-color .5s;
-}
-
-.menu li:hover{
-    border-color: #D8C4BA;
-}
 
 .title{
     display: flex;
@@ -111,63 +77,7 @@ footer{
     width: 100%;
     font-size: .75rem;
 }
-.contact{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-family: 'Poppins', sans-serif;
-}
-.contact i {
-    font-size: 1.5rem;
-}
 
-.contact-info {
-    display: flex;
-    align-items: center;
-    gap: 2.4rem;
-}
-
-.text-contact {
-    font-size: 1rem;
-}
-
-.social {
-    display: flex;
-    gap: 2rem;
-}
-.social-container{
-    display: flex;
-    transform: scale(1.2);
-}
-.social-icon {
-    height: 16px;
-    width: 16px;
-    padding: 1.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 3px solid #FFF;
-    color: white;
-    font-size: 1.7rem;
-    transition: color .15s;
-}
-
-.social-icon:hover {
-    background-color: blue;
-    border-color: white;
-    transform: scale(1.1);
-
-}
-.copyrigth {
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.collections-container{
-    background-color: red;
-}
 
 .imagem{
     width: 250px;
