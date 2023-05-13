@@ -1,6 +1,7 @@
 'use strict'
 
 import { carregarVideo } from "./videos.js"
+import { carregarObjetos } from "./collections.js"
 
 const routes = {
     '/': '/index.html',
@@ -21,12 +22,13 @@ const route = async () => {
 
     document.getElementById('root').innerHTML = html
 
-    console.log(html)
 
     if(path == '/videos'){
         carregarVideo()
     } else if (path == '/collections'){
-
+        carregarObjetos()
+    } else {
+        return false;
     }
 
 

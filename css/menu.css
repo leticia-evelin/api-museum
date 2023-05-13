@@ -3,15 +3,14 @@
     gap: 80px;
     font-size: 2rem;
     align-items: center;
-    /* width: 100%; */
     font-family: 'Poppins', sans-serif;
 }
 
-.menu li{
+.menu a{
     border-bottom: 4px solid transparent;
     transition: border-color .5s;
 }
 
-.menu li:hover{
-    border-color: #D8C4BA;
+.menu a:hover{
+    border-color: black;
 }

@@ -6,8 +6,6 @@
     const response = await fetch(url)
     const data = await response.json()
     const {videos} = data;
-    console.log(videos);
-
         return{
             // url : videos.youtube_url,
             // title : videos.title,
@@ -16,20 +14,24 @@
         }   
 }
 
-export const foto = async () => {
+export const exibicao = async () => {
 
-    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/437133`
+    const url = `https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.people.getOnDisplay&access_token=d5e35518b330cab7beb621b5c68cad84&page=1&per_page=20`
+    // const url = `https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.people.getOnDisplay&access_token=d5e35518b330cab7beb621b5c68cad84&page=21&per_page=13`
+    // const url = `https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.people.getOnDisplay&access_token=d5e35518b330cab7beb621b5c68cad84&page=2&per_page=4`
     const response = await fetch(url)
     const data = await response.json()
-    // const {images} = data;
-    console.log(foto)
+    const {people} = data;
+    // console.log(people)
+        return{
+            // nome : people.name,
+            // time: people.date
 
-    return{
-        // url : images.url,
-        // id : images.image_id
-        ...data
-    }
-
+            ...data
+        }
 
 
 }
+
+
+

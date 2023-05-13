@@ -2,7 +2,7 @@
 
 
 import { colecoes } from "./api.js"
-let teste = await colecoes();
+let data = await colecoes();
 
 
 // class cardVideo extends HTMLElement {
@@ -32,23 +32,23 @@ let teste = await colecoes();
    // component(video){
      
 
-   const cardVideo = (teste) => {
+   const cardVideo = (data) => {
       const card = document.createElement('div')
       card.classList.add('card')
 
       const name = document.createElement('h3')
       name.classList.add('card__title')
-      name.textContent = teste.title
+      name.textContent = data.title
 
       const description = document.createElement('p')
       description.classList.add('card__description')
-      description.textContent = teste.description
+      description.textContent = data.description
 
       const iframe = document.createElement('iframe')
       iframe.classList.add('card__video')
       iframe.width = '560'
       iframe.height = '315'
-      iframe.src = "https://" + teste.youtube_url.replace("watch?v=", "embed/");
+      iframe.src = "https://" + data.youtube_url.replace("watch?v=", "embed/");
       iframe.autoplay;
       iframe.allowFullscreen = true;
       
@@ -62,9 +62,8 @@ let teste = await colecoes();
 
    export const carregarVideo = async () => {
       
-      console.log(teste)
       const container = document.getElementById('container-videos')
-      const cards =  teste.videos.map(cardVideo)
+      const cards =  data.videos.map(cardVideo)
       container.replaceChildren(...cards)
    }
 

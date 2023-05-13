@@ -1,0 +1,19 @@
+.container-collections{
+    margin-top: 25%;
+    /* display: grid; */
+    display: flex; 
+    /* grid-area: texto; */
+    height: 100%;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20%; 
+}
+
+.pintura{
+    /* display: grid; */
+    /* grid-area: imagem; */
+    width: 1440px;
+    height: 200px;
+}
+

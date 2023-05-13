@@ -1,28 +1,39 @@
 /* deixar no web component */
 
 main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row-reverse;
-    height: 100%;
-    width: 100%;
+     overflow-y: scroll; 
+} 
+body{
+    overflow: hidden;
 }
-
+.container-videos{
+    display: flex;
+    height: 100%;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: auto;
+    gap: 10%;
+}
 .card{
-    width: 450px;
-    height: 450px;
+    align-items: center;
+    width: 800px;
+    height: 550px;
 }
 
 .card__title{
+    text-align: center;
     font-family: 'Inter', sans-serif;
 }
 
 .card__video{
-    width: 450px;
-    height: 300px;
+    width: 800px;
+    height: 450px;
 }
 
 .card__description{
+    text-align: center;
+    width: 750px;
     font-family: 'Inter', sans-serif;
 }
