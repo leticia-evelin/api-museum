@@ -5,31 +5,6 @@ import { colecoes } from "./api.js"
 let data = await colecoes();
 
 
-// class cardVideo extends HTMLElement {
-//    constructor(){
-//        super()
-//        //virando global this.
-//        this.shadow = this.attachShadow({mode: 'open'}) //pode alterar as opções
-//    }
-
-//    attributeChangedCallback(nameAttr, oldValue, newValue){
-//       this[nameAttr] = newValue 
-//    }
-
-//    connectedCallback(){
-//       //metodos/função
-//       this.shadow.appendChild(this.component())
-//       this.shadow.appendChild(this.styles())
-//    }
-
-//    styles(){
-//       const css = document.createElement('style')
-//       css.textContent = `
-   
-   
-//       `
-//    }
-   // component(video){
      
 
    const cardVideo = (data) => {
@@ -69,6 +44,3 @@ let data = await colecoes();
 
   
 carregarVideo()
-
-// customElements.define('container-videos', cardVideo)
-

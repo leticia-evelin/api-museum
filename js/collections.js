@@ -2,7 +2,7 @@
 
 import { exibicao } from "./api.js"
 let dados = await exibicao();
-console.log(dados)
+
 
 const cardPeople = (dados) => {
 
@@ -37,5 +37,5 @@ export const carregarObjetos = async () => {
     container.replaceChildren(...cards)
  }
 
-console.log(carregarObjetos);
+
 carregarObjetos()

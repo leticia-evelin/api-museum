@@ -27,9 +27,7 @@ const route = async () => {
         carregarVideo()
     } else if (path == '/collections'){
         carregarObjetos()
-    } else {
-        return false;
-    }
+    } 
 
 
 }

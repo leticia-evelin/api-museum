@@ -16,7 +16,7 @@ body{
     justify-items: auto;
     gap: 10%;
 }
-.card{
+/* .card{
     align-items: center;
     width: 800px;
     height: 550px;
@@ -36,4 +36,4 @@ body{
     text-align: center;
     width: 750px;
     font-family: 'Inter', sans-serif;
-}
+} */
