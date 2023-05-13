@@ -9,14 +9,11 @@ body{
 .container-videos{
     display: flex;
     height: 100%;
-    /* flex-wrap: wrap; */
-    align-items: flex-start;
     flex-direction: column;
-    justify-content: space-between;
     justify-items: auto;
     gap: 10%;
 }
-/* .card{
+.card{
     align-items: center;
     width: 800px;
     height: 550px;
@@ -36,4 +33,19 @@ body{
     text-align: center;
     width: 750px;
     font-family: 'Inter', sans-serif;
-} */
+}
+
+@media(max-width: 640px){
+    .card{
+        width: 600px;
+        height: 550px;
+    }
+    .card__video{
+        width: 550px;
+        height: 350px;
+    }
+    .card__description{
+        font-size: 1.3rem;
+        width: 550px;
+    }
+}

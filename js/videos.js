@@ -23,6 +23,7 @@ let data = await colecoes();
       iframe.classList.add('card__video')
       iframe.width = '560'
       iframe.height = '315'
+      iframe.name = data.title
       iframe.src = "https://" + data.youtube_url.replace("watch?v=", "embed/");
       iframe.autoplay;
       iframe.allowFullscreen = true;
@@ -39,7 +40,7 @@ let data = await colecoes();
       
       const container = document.getElementById('container-videos')
       const cards =  data.videos.map(cardVideo)
-      container.replaceChildren(...cards)
+      container.append(...cards)
    }
 
   

@@ -34,7 +34,7 @@ export const carregarObjetos = async () => {
       
     const container = document.getElementById('container-collections')
     const cards =  dados.people.map(cardPeople)
-    container.replaceChildren(...cards)
+    container.append(...cards)
  }
 
 

@@ -14,3 +14,13 @@
 .menu a:hover{
     border-color: black;
 }
+
+
+@media(max-width: 640px){
+
+    .menu{
+        gap: 40px;
+        font-size: 1.8rem;
+    }
+    
+}

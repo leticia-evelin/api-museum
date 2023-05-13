@@ -1,19 +1,56 @@
 .container-collections{
-    margin-top: 25%;
-    /* display: grid; */
-    display: flex; 
-    /* grid-area: texto; */
+    display: flex;
+    padding-top: 25%; 
     height: 100%;
-    /* flex-wrap: wrap; */
-    align-items: flex-start;
     flex-direction: column;
-    gap: 20%; 
 }
 
 .pintura{
-    /* display: grid; */
-    /* grid-area: imagem; */
     width: 1440px;
     height: 200px;
 }
 
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    font-family: 'Inter', sans-serif;
+    gap: 10px;
+    font-size: 1.5rem;
+    width: auto;
+    height: auto;
+}
+
+.card__biography{
+    font-size: 1.5rem;
+}
+
+.card__date{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.card__objects{
+    font-size: 1.2rem;
+    color: gray;
+}
+
+@media(max-width: 640px){
+
+    .container-collections{
+        display: flex;
+        padding-top: 5px; 
+    }
+    .pintura{
+        display: none;
+    }
+    .card__biography{
+        font-size: 1.7rem;
+    }
+    .card__date{
+        font-size: 1.4rem;
+    }
+    .card__objects{
+        font-size: 1.4rem;
+    }
+}

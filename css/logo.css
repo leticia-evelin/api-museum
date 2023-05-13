@@ -3,15 +3,24 @@
     width: 40%; 
     gap: 10px;
 }
-.logo__image{
-    display: flex;
-    width: 90px;
-    height: 90px;
-}
+
 .logo__title{
     display: flex;
     font-size: 24px;
     width: 120px;
     align-items: center;
     font-family: 'Acme', sans-serif;
+}
+
+
+@media(max-width: 640px){
+
+    .logo{
+        width: 20%; 
+        gap: 5px;
+    }
+    
+    .logo__title{
+        width: 70px;
+    }
 }

@@ -20,7 +20,7 @@
 
 .social {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 .social-container{
     display: flex;
@@ -49,4 +49,14 @@
 .copyrigth {
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
+}
+
+@media(max-width: 640px){
+
+    .contact{
+        display: none;
+    }
+    .copyrigth {
+        font-size: 1.2rem;
+    }
 }
